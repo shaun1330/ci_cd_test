@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  web:
+    environment:
+      - DEBUG=False
+    command: gunicorn ci_cd_test.wsgi:application --bind 0.0.0.0:8000
